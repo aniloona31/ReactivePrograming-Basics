@@ -25,6 +25,7 @@ public class RouterConfig {
 				.GET("/router/customers",customerHandler::loadCustomers)
 				.GET("/router/customers-stream",handler::getCustomers)
 				.GET("/router/config/{input}",handler::getCustomer)
+				//here i dont need to use any Request body or Request Param it is automatically taken care of
 				.POST("/router/post",handler::saveCustomer) 
 				.build();
 	}
